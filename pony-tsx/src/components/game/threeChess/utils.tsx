@@ -1,4 +1,4 @@
-export default function calcWinners(sitem: string[]) {
+export function calcWinners(sitem: any[]) {
 
     const winLines = [
         [0, 1, 2],
@@ -13,9 +13,15 @@ export default function calcWinners(sitem: string[]) {
 
     for (let i = 0; i < winLines.length; i++) {
         const [a, b, c] = winLines[i];
-        if (sitem[a] && sitem[a] === sitem[b] && sitem[a] === sitem[c]) {
-            return sitem[a]
+        if (sitem[a].value && sitem[a].value === sitem[b].value && sitem[a].value === sitem[c].value) {
+            return sitem[a].value
         }
     }
     return null;
+}
+
+export function calcCoordinate(coordinateber: number): number[] {
+    const x:number = coordinateber % 3;
+    const y:number = Math.floor(coordinateber / 3);
+    return [x, y]
 }

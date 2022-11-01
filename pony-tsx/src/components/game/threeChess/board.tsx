@@ -1,10 +1,10 @@
 import Square from "./square";
 
 export default function Board(props: { squares: any, onClick: Function }) {
-
+console.log(props.squares)
     function renderSquare(i: number) {
         return <Square
-            value={props.squares[i]}
+            value={props.squares[i].value}
             onClicks={() => props.onClick(i)}
         />;
     }
