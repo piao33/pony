@@ -67,7 +67,7 @@ export default class ThreeChess extends React.Component<any, any> {
                                        .join('|');
             let desc = (move === 0 && !this.state.isAsc) || (move === history.length - 1 && this.state.isAsc) 
                         ? `game start`
-                        : `move to ${move} step ${coordinatebers}`;
+                        : `move to ${this.state.isAsc ? history.length - 1 - move : move} step ${coordinatebers}`;
             return (<li className={`${(this.state.stepNumber === move && !this.state.isAsc || this.state.isAsc && this.state.stepNumber ===  history.length - 1 - move) ? 'bold' : ''} history`} key={move.toString()}>
                 <button onClick={() => this.jumpTo(this.state.isAsc ? history.length - 1 - move : move)}>{desc}</button>
             </li>)
