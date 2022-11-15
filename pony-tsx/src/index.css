@@ -31,6 +31,9 @@ ol, ul {
   text-align: center;
   width: 34px;
 }
+.win-square {
+  color: red;
+}
 
 .square:focus {
   outline: none;
@@ -47,4 +50,17 @@ ol, ul {
 
 .game-info {
   margin-left: 20px;
+}
+
+.history{
+  margin: 6px 0;
+}
+
+.bold{
+  font-weight: bold;
+  color: #2807bd;
+}
+.bold  button{
+  font-weight: bold;
+  color: #2807bd;
 }

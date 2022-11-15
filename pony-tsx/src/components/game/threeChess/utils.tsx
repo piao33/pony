@@ -14,7 +14,7 @@ export function calcWinners(sitem: any[]) {
     for (let i = 0; i < winLines.length; i++) {
         const [a, b, c] = winLines[i];
         if (sitem[a].value && sitem[a].value === sitem[b].value && sitem[a].value === sitem[c].value) {
-            return sitem[a].value
+            return [a,b,c]
         }
     }
     return null;
